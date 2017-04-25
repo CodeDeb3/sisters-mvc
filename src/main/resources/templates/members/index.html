@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${members} and ${members.size()}">no members yet! </p>
+
+
+<table class="table">
+
+    <!--<tr class = "button">-->
+        <!--<th>Home |</th>-->
+        <!--<th>TBB |</th>-->
+        <!--<th>Events</th>-->
+    <!--</tr>-->
+
+    <tr th:each="member : ${members}">
+        <td th:text="${member.lastname}"></td>
+        <td th:text="${member.firstname}"></td>
+        <!--<td th:text="${member.event.name}"></td>-->
+    </tr>
+
+</table>
+
+<a href="/member/add">Add</a> |
+<a href="/member/remove">Remove</a>
+
+
+</body>
+</html>

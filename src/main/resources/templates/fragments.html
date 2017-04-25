@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+
+    <title th:text="${title}">Sister Members</title>
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <!--<link rel="stylesheet" th:href="@{/css/normalize.css"/>-->
+    <!--<link rel="stylesheet" th:href="@{/css/skeleton.css"/>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!--<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <link th:href="@{http://fonts.googleapis.com/css?family=Raleway:400,300,600}" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+
+
+    <div>
+        <div class = "row">
+            <h2 th:text="${title}">Default Title </h2>
+        </div>
+    </div>
+
+    <div th:fragment="navigation">
+
+    <div class ="row">
+        <a class ="button" href="/members">List |</a>
+        <a class ="button" href="/members/add">Add Members |</a>
+        <a class ="button" href="/members/delete">Remove Members |</a>
+
+        <a class ="button" href="/members/current">Current Members |</a>
+        <a class ="button" href="/envents">Events</a>
+
+
+    </div>
+    </div>
+
+</body>
+</html>
+
+
+
