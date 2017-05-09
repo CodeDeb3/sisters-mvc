@@ -11,4 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @Transactional
 public interface MemberDao extends CrudRepository <Members, Integer> {
+    static void add(Members newMembers) {
+    }
 }

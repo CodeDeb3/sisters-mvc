@@ -17,7 +17,7 @@ public class Members {
 
     @Id
     @GeneratedValue
-    private int id;
+    private int mem_id;
 
     @NotNull
     @Size(min =3, max = 15)
@@ -29,26 +29,32 @@ public class Members {
 
     private String address;
 
-    private String cityState;
+    private String city;
+
+    private String state;
 
     @Size(min = 5, max=9)
     private String zipCode;
 
+    private String email;
+
 //    private List<Events> events;
 
     public Members (String lastName, String firstName, String address,
-                    String cityState, String zipCode) {
+                    String city, String state, String zipCode,String email) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.address = address;
-        this.cityState = cityState;
+        this.city = city;
+        this.state = state;
         this.zipCode = zipCode;
+        this.email = email;
     }
 
     public Members(){}
 
     public int getId() {
-        return id;
+        return mem_id;
     }
 
     public String getLastName() {
@@ -75,12 +81,20 @@ public class Members {
         this.address = address;
     }
 
-    public String getCityState() {
-        return cityState;
+    public String getCity() {
+        return city;
     }
 
-    public void setCityState(String cityState) {
-        this.cityState = cityState;
+    public String state() {
+        return state;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getZipCode() {
@@ -91,7 +105,18 @@ public class Members {
         this.zipCode = zipCode;
     }
 
-////    public List<Events> getEvents() {
+    public String getState() {
+        return state;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    ////    public List<Events> getEvents() {
 ////        return events;
 ////    }
 //
