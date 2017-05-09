@@ -2,19 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:fragment="head">
     <meta charset="UTF-8"/>
-
-    <title th:text="${title}">Sister Members</title>
+    <title th:text="${title}">Sisterhood Members</title>
 
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
-    <!--<link rel="stylesheet" th:href="@{/css/normalize.css"/>-->
-    <!--<link rel="stylesheet" th:href="@{/css/skeleton.css"/>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <!--<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-    <link th:href="@{http://fonts.googleapis.com/css?family=Raleway:400,300,600}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-
 
     <div>
         <div class = "row">
@@ -22,19 +17,18 @@
         </div>
     </div>
 
-    <div th:fragment="navigation">
+    <nav th:fragment="navigation">
 
-    <div class ="row">
+    <table class ="table">
         <a class ="button" href="/members">List |</a>
         <a class ="button" href="/members/add">Add Members |</a>
         <a class ="button" href="/members/delete">Remove Members |</a>
-
+        <a class = "button" href="/events/add">Add Program Type</a>
         <a class ="button" href="/members/current">Current Members |</a>
-        <a class ="button" href="/envents">Events</a>
+        <a class ="button" href="/events">Events</a>
 
-
-    </div>
-    </div>
+    </table>
+    </nav>
 
 </body>
 </html>
